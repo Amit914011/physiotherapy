@@ -8,7 +8,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <!-- Site Icon -->
-    <link rel="icon" type="image" href="/img/faviconlogo.png">
+    <link rel="icon" type="image" href="/img/fabicon.png">
 
 
     <!-- Google Web Fonts -->
@@ -231,7 +231,7 @@
                 <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item rounded">
                         <div class="service-img rounded-top">
-                            <img src="img/Spot Inj.png" class="img-fluid rounded-top w-100" alt="">
+                            <img src="img/cardimg.png" class="img-fluid rounded-top w-100" alt="">
                         </div>
                         <div class="service-content rounded-bottom bg-light p-4">
                             <div class="service-content-inner">
@@ -351,7 +351,7 @@
                         <div class="form-container">
                             <h1>Get Appointment</h1>
                             <p class="text-white">If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
-                            <form action="" onsubmit=" return formvalidate()">
+                            <form action="" method="post" name="contact-form" onsubmit=" return formvalidate()">
                                 <input type="text" id="fullName" placeholder="Enter your full name*" class="input-field"
                                     required name="Full_Name">
                                 <i class="fa-solid fa-circle-info error1 " id="error1"></i>
@@ -855,7 +855,7 @@
                         <a href="#work-injuries"><i class="fas fa-angle-right me-2"></i> Work Injuries</a>
                         <!-- <a href=""><i class="fas fa-angle-right me-2"></i> Diagnostics</a> -->
                         <!-- <a href=""><i class="fas fa-angle-right me-2"></i> Manual Therapy</a> -->
-                        <a href="#spots-injuries"><i class="fas fa-angle-right me-2"></i> Spots Injuries</a>
+                        <a href="#spots-injuries"><i class="fas fa-angle-right me-2"></i> Sports Injuries</a>
                         <a href="#chronic-pain-management"><i class="fas fa-angle-right me-2"></i>Chronic Pain Management</a>
                     </div>
                 </div>
@@ -891,9 +891,9 @@
     </div>
     <!-- Copyright End -->
 <!-- fixed section start -->
-    <div style=" position: fixed; bottom: 10px; right: 10px; z-index: 999;gap: 5px;">
-        <a href="tel:7977324724"><img src="img/call.png" alt="" width="50px" style="background-color: #fff; border-radius: 50%;"></a>
-        <a href="https://wa.me/message/A7NBDCIXFCFCO1"><img src="img/whatsapp.png" alt="" width="50px" style="background-color: #fff; border-radius: 50%;"></a>
+    <div class="socialicon">
+        <a href="tel:7977324724"><i class="fa-solid fa-phone"></i></a>
+        <a href="https://wa.me/message/A7NBDCIXFCFCO1"><i class="fa-brands fa-whatsapp"></i></a>
     </div>
     <!-- fixed section end -->
     <!-- Back to Top -->
@@ -913,5 +913,22 @@
     <script src="js/main.js"></script>
 
 </body>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzTQlZFq4Hmqb7RY9oXYS19XrMOKAeVYSxbDXwlaqRMb_anto-nWQgCJs-vmxpxkd9X1w/exec'
+
+const form = document.forms['contact-form']
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form), mode:"no-cors"})
+  .then(response => alert("Thank you! your form is submitted successfully." ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
+
+// AKfycbzTQlZFq4Hmqb7RY9oXYS19XrMOKAeVYSxbDXwlaqRMb_anto-nWQgCJs-vmxpxkd9X1w
+
+// https://script.google.com/macros/s/AKfycbzTQlZFq4Hmqb7RY9oXYS19XrMOKAeVYSxbDXwlaqRMb_anto-nWQgCJs-vmxpxkd9X1w/exec
+</script>
 
 </html>
