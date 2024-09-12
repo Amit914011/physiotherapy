@@ -300,7 +300,7 @@
 
 
     <!-- Book Appointment Start -->
-    <div class="container-fluid appointment py-5" id="contact">
+    <div class="container-fluid appointment py-5">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2">
@@ -348,10 +348,10 @@
                 <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.4s">
                     <div class="appointment-form rounded p-5">
 
-                        <div class="form-container">
+                        <div class="form-container" id="contact">
                             <h1>Get Appointment</h1>
                             <p class="text-white">If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
-                            <form action="" method="post" name="contact-form" onsubmit=" return formvalidate()">
+                            <form action="" method="post" name="contact-form" onsubmit=" return formvalidate()" >
                                 <input type="text" id="fullName" placeholder="Enter your full name*" class="input-field"
                                     required name="Full_Name">
                                 <i class="fa-solid fa-circle-info error1 " id="error1"></i>
